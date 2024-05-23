@@ -16,6 +16,7 @@ body{
     overflow:hidden;
 }
 
+/*säiliö kuvilla*/
 .container{
     display:flex;
     width:90vw;
@@ -35,6 +36,7 @@ body{
     margin:10px;
 }
 
+/*kuvatekstin tyyli*/
 .panel h3{
     position:absolute;
     bottom:0px;
@@ -42,20 +44,24 @@ body{
     opacity:0;
 }
 
+/*jos kuva on aktiivinen*/
 .panel.active{
     flex:5;
 }
 
+/*teksti aktiivisessa kuvassa*/
 .panel.active h3{
     opacity:1;
      transition: opacity 0.4s ease-in 0.4s;
 }
 
+/*jos näytön leveys alle 480px*/
 @media(max-width:480px){
     .container{
         width:100vw;
     }
 
+    /*jättää vain 3 kuvaa näytölle*/
     .panel:nth-of-type(4),.panel:nth-of-type(5),.panel:nth-of-type(6),.panel:nth-of-type(7){
         display:none;
     }
